@@ -24,7 +24,6 @@ for file in [file for file in os.listdir("database")][:3]:
                 keypoints = len(kp1)
             else:
                 keypoints = len(kp2)
-
             if len(mp) / keypoints * 100 > score:
                 score=len(mp) / keypoints * 100
                 print('The best match :'+ file)
@@ -34,4 +33,4 @@ for file in [file for file in os.listdir("database")][:3]:
                 cv2.imshow("result", result)
                 cv2.waitKey(0)
                 cv2.destroyAllWindows()
-                break;
+                break
